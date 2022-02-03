@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Display CSV data</title>
+    <style>
+        img {
+            background: white;
+            display: inline-block;
+            margin: 75px 0px;
+        }
+
+        text {
+            margin-left: 15px;
+            float: left;
+        }
+    </style>
+
+    <a href="" id="refresh">Refresh</a>
+</head>
+<body>
+    <div>
+
+    {{ data|safe }}
+
+    </div>
+</body>
+
+<body>
+{% load static %}
+    <div>
+    <img src ="{% static '/static/Dipp_project.drawio.png' %}" alt="Image">
+    </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+  $('#refresh').click(function(evt){
+    evt.preventDefault();
+    $.ajax({
+        synch: 'true',
+        type: 'GET',
+        url: '{% url 'index' %}',
+        success: function(data){
+            $('#content').html(data);
+        }
+    });//End Ajax
+  })
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <div>
+
+    {{ data|safe }}
+
+    </div>
+</body>
+
+<body>
+
+    <div>
+    <img src ="{% static 'static/images/Dipp_project.drawio.png' %}" alt="Image">
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

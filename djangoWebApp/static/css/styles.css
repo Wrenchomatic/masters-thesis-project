@@ -1,0 +1,17 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    background: black;
+    display: inline-block;
+    margin: 75px 0px;
+    height: auto;
+}
+
+text {
+    margin-left: 15px;
+    float: left;
+}
