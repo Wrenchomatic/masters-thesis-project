@@ -1,5 +1,6 @@
 import csv
 
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 # Create your views here.
@@ -18,7 +19,8 @@ Fetch data at interval?
 
 
 # TODO display picture and maybe update dynamically?
-# Add login page
+# Add login
+@login_required
 def index(request):
     with open('static/data.csv') as csv_file:
         rows = []
