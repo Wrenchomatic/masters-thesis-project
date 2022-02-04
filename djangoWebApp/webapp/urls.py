@@ -10,6 +10,3 @@ urlpatterns = [
     path('', views.gallery, name='gallery'),
 ]
 
-urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
-]

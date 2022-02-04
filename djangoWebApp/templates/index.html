@@ -7,9 +7,14 @@
 {% block content %}
 
 <body>
+    <ul>
+        <li><strong>Average temperature</strong> {{ temp }}</li>
+        <li><strong>Average humidity</strong> {{ hum }}</li>
+        <li><strong>Average pressure</strong> {{ pres }}</li>
+    </ul>
     <div>
 
-    {{ data|safe }}
+<!--    {{ data|safe }} -->
 
     </div>
 </body>

@@ -25,9 +25,17 @@ def index(request):
         # data = csv_file.read()
         data = pd.read_csv(csv_file)
         dataframe = pd.DataFrame(data)
-        mean = dataframe[['temp', 'hum', 'pres']].mean(axis=0)
-        new_dataframe = pd.DataFrame(mean)
-        data_html = new_dataframe.to_html()
+        mean_temp = dataframe['temp'].mean()
+        mean_hum = dataframe['hum'].mean()
+        mean_pres = dataframe['pres'].mean()
+
+        round_temp = round(mean_temp, 1)
+        round_hum = round(mean_hum, 1)
+        round_pres = round(mean_pres, 1)
+
+        #mean = dataframe[['temp', 'hum', 'pres']].mean()
+        #new_dataframe = pd.DataFrame(mean)
+        #data_html = new_dataframe.to_html()
         # data_html = dataframe.to_html()
 
         '''
@@ -36,7 +44,10 @@ def index(request):
             rows.append(row)
         '''
         context = {
-            'data': data_html,
+            'temp': round_temp,
+            'hum': round_hum,
+            'pres': round_pres,
+            #'data': data_html,
         }
         response = HttpResponse(data, content_type='text/plain')
         # return response
