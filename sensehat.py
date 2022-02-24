@@ -41,7 +41,7 @@ cyan = (0, 255, 255)
 colourlist = [yellow, red, blue, green, magenta, cyan]
 
 #Write sensor data to file
-with open('sensor_data.csv','w', newline='') as f:
+with open('/home/pi/Desktop/project/masters-thesis-project/djangoWebApp/static/sensor_data.csv','w', newline='') as f:
     
     data_writer = writer(f)
     data_writer.writerow(['temp','hum', 'pres', 'datetime'])
