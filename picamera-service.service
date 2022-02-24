@@ -1,0 +1,14 @@
+[Unit]
+Description = Raspberry PICamera program
+After-network = online.target
+
+[Service]
+ExecStart=/bin/python3 /home/pi/Desktop/pi_camera.py 
+WorkingDirectory=/home/pi/Desktop/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+ 
+[Install]
+WantedBy=multi-user.target
