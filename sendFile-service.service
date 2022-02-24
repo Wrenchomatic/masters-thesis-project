@@ -1,0 +1,14 @@
+[Unit]
+Description = Raspberry SendFile program
+After-network = online.target
+
+[Service]
+ExecStart=/bin/python3 /home/pi/Desktop/sendFile.py 
+WorkingDirectory=/home/pi/Desktop/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+ 
+[Install]
+WantedBy=multi-user.target

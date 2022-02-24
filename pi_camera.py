@@ -19,9 +19,9 @@ with picamera.PiCamera() as camera:
         while True:
             camera.resolution = (1024, 768)
             time.sleep(2)
-            camera.capture('foo.jpg')
+            camera.capture('picture.png')
             time.sleep(2)
-            camera.capture('foo2.jpg')
+            #camera.capture('foo2.jpg')
     except KeyboardInterrupt:
         pass
         
