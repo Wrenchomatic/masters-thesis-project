@@ -7,19 +7,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import pandas as pd
 
-# def homepage(request):
-#    return render(request, 'index.html', {})
-
-'''
-Read values from file
-Construct HTML table?
-Serve the data on a different endpoint
-Fetch data at interval?
-'''
-
-
-# TODO display picture and maybe update dynamically?
-# Add login
 @login_required
 def index(request):
     with open('static/data.csv') as csv_file:
@@ -60,7 +47,7 @@ def gallery(request):
     template_path = "templates/index.html"
     context = {
         "images": [
-            "Dipp_project.drawio.png"
+            "picture.png"
         ]
     }
 
