@@ -17,9 +17,10 @@ Send data to sensehat raspberry
 with picamera.PiCamera() as camera:
     try:
         while True:
-            camera.resolution = (1024, 768)
+            camera.resolution = (2592, 1944)
+            camera.framerate = 15
             time.sleep(2)
-            camera.capture('picture.png')
+            camera.capture('picture.jpg')
             time.sleep(2)
             #camera.capture('foo2.jpg')
     except KeyboardInterrupt:

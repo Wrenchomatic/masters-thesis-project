@@ -9,7 +9,7 @@ import pandas as pd
 
 @login_required
 def index(request):
-    with open('static/data.csv') as csv_file:
+    with open('static/sensor_data.csv') as csv_file:
         rows = []
         # data = csv_file.read()
         data = pd.read_csv(csv_file)
@@ -47,7 +47,7 @@ def gallery(request):
     template_path = "templates/index.html"
     context = {
         "images": [
-            "picture.png"
+            "picture.jpg"
         ]
     }
 
