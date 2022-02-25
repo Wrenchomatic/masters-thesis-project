@@ -1,0 +1,14 @@
+[Unit]
+Description = Raspberry Sensehat program
+After-network = online.target
+
+[Service]
+ExecStart=/bin/bash /home/pi/Desktop/copy-csv.sh
+WorkingDirectory=/home/pi/Desktop/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+ 
+[Install]
+WantedBy=multi-user.target
