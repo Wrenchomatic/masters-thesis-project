@@ -17,8 +17,7 @@ def bruteforcer(url):
     session = requests.session()
 	#List of usernames to try
     usernames = ['admin', 'user', 'tom']
-	#Open dictionary file with passwords to try
-    with open("/home/antti/common_roots.txt", "r") as file:
+    with open("*insert path here*common_roots.txt", "r") as file:
         content = file.readlines()
         passwords = [x.strip() for x in content]
         
