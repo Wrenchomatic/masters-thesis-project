@@ -55,26 +55,7 @@ while True:
             timeStamp = datetime.now()
             sense.clear(random.choice(colourlist))
         
-        
-    '''with open('/home/pi/Desktop/sensor_data.csv','w', newline='') as f:
-        
-        data_writer = writer(f)
-        data_writer.writerow(['temp','hum', 'pres', 'datetime'])
-        
-        while True:
-            data = get_sense_data()
-            #print("timeStamp is : ", timeStamp)
-            #print("date[-1] is : ", data[-1])
-            dt = data[-1] - timeStamp
-            
-            #Gather data with a delay
-            if dt.seconds > delay:
-                data_writer.writerow(data)
-                timeStamp = datetime.now()
-                #sense.show_message("Writing Data", text_colour=yellow)
-                sense.clear(random.choice(colourlist))
-                
-       '''             
+    
 ''' DATA LOOKS LIKE THIS
 temp,hum,pres,datetime
 29.9,22.3,1019.9,2022-01-18 15:35:11.292750

@@ -22,7 +22,7 @@ def bruteforcer(url):
     #    csrf_token = csrf_token.group(1)
         
     usernames = ['admin', 'user', 'tom']
-    with open("/home/antti/common_roots.txt", "r") as file:
+    with open("*insert path here*common_roots.txt", "r") as file:
         content = file.readlines()
         passwords = [x.strip() for x in content]
         
